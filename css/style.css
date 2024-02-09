@@ -21,79 +21,91 @@ a{
 body{
     font-family: var(--Figtree-font);
     background-color: var(--Yellow);
-    min-height: 100vh;
-    padding: 90px 0;
+    min-height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.card{
-    margin: 0 22px;
+.Blog-preview-card{
+    margin: 0 23px;
     background-color: var(--White);
     max-width: 382px;
-    padding: 24px;
+    padding: 23px;
     border-radius: 20px;
     border: 2px solid var(--Black);
     box-shadow: 7px 7px 0px 0px var(--Black);
 }
-.card:hover{
+main{
+    width:fit-content;
+}
+.Blog-preview-card:hover{
     transition: box-shadow 0.3s;
     box-shadow:12px 12px ;
 }
-.card > figure img {
-    display: block;
-    border-radius: 10px;
+img{
     width: 100%;
 }
-.content{
+.Blog-preview-card > div img {
+    display: block;
+    border-radius: 10px;
+}
+.Blog-preview-card .content{
     margin-top: 20px;
 }
-strong{
+h2{
     display: inline-block;
-    width: fit-content;
-    padding: 5px 15px;
+    padding: 6px 13px;
+    font-weight: 800;
     background-color: var(--Yellow);
     text-transform: capitalize;
-    margin: 12px 0;
+    margin-bottom:13px;
+    font-size: 0.9rem;
     border-radius: 5px;
 }
-h5{
+h6{
     font-weight: 600;
+    font-size: 0.88rem;
     text-transform: capitalize;
 }
-h2{
-    margin: 12px 0;
+.content span{
+    display: block;
+    margin: 20px 0;
     font-weight: 800;
+    font-size: 1.5rem;
 }
 a:hover{
     transition: color 0.3s;
     color: var(--Yellow);
-
 }
 p{
     color: var(--Grey);
-    padding: 5px 0px 20px;
+    margin-bottom: 23px;
     font-size: 14px;
 }
-#Author{
+figure{
     display: flex;
+    justify-content: center;
     align-items: center;
 }
-#Author figure{
+.image{
     width: 32px;
     height: 32px;
 }
-#Author figure img{
+.image img{
     display: block;
-    width: 100%;
 }
-#Author h3{
+
+figcaption{
     flex: 1;
-    padding: 10px 0 10px 12px;
+    padding-left: 12px;
     text-transform: capitalize;
     font-size: 12px;
     font-weight: 800;
 }
+
 @media(min-width:404px){
     .card{
-        margin: 0 auto;
+        margin: 0;
     }
     p{
         font-size: 16px;
